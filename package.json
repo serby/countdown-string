@@ -1,0 +1,31 @@
+{
+  "name": "countdown-string",
+  "description": "Gives a string based countdown between two dates",
+  "version": "0.0.0",
+  "dependencies": {
+    "moment": "^2.10.3"
+  },
+  "scripts": {
+    "lint": "jshint .",
+    "checkStyle": "jscs .",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "istanbul cover ./node_modules/.bin/_mocha test",
+    "posttest": "istanbul check-coverage --statements 85 --branches 70 --functions 100 --lines 90 && rm -rf coverage"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "author": "Paul Serby <paul.serby@clock.co.uk>",
+  "license": "ISC",
+  "devDependencies": {
+    "istanbul": "^0.3.8",
+    "jscs": "^1.6.1",
+    "jshint": "^2.5.6",
+    "mocha": "^2.2.1",
+    "mockdate": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:serby/countdown-string.git"
+  }
+}
